@@ -1280,3 +1280,93 @@ Calculate Average
 ```
 
 ---
+
+# 13. Stage 11 — Attendance Analysis
+
+## 13.1 Average Attendance
+
+Click an empty cell.
+
+For example:
+
+```text
+M6
+```
+
+Enter:
+
+```excel
+=AVERAGE(E2:E16)
+```
+
+Expected result:
+
+```text
+80.60
+```
+
+If you want to display it as:
+
+```text
+80.60%
+```
+
+you can format the cell appropriately based on how your attendance values are stored.
+
+> Since this project stores attendance as `88`, `75`, etc., not as Excel percentage values like `88% = 0.88`, the numerical average is `80.60` percentage points.
+
+---
+
+# 13.2 Students Below 75% Attendance
+
+Click:
+
+```text
+M7
+```
+
+Enter:
+
+```excel
+=COUNTIF(E2:E16,"<75")
+```
+
+Expected result:
+
+```text
+4
+```
+
+You can label it:
+
+```text
+Students Below 75% Attendance
+```
+
+---
+
+# 13.3 COUNTIF Formula Explanation
+
+The formula:
+
+```excel
+=COUNTIF(E2:E16,"<75")
+```
+
+means:
+
+```text
+Look at E2:E16
+       ↓
+Find values less than 75
+       ↓
+Count them
+```
+
+Therefore, if four students have attendance below 75:
+
+```text
+Result = 4
+```
+
+---
