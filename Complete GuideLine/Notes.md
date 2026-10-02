@@ -338,3 +338,332 @@ Home
 for better alignment.
 
 ---
+
+# 7. Stage 5 — Data Validation
+
+Now we check whether the dataset contains incorrect data.
+
+---
+
+# 7.1 Missing Data Check
+
+Select the entire data range:
+
+```text
+A2:I16
+```
+
+Then go to:
+
+```text
+Home
+→ Find & Select
+→ Go To Special
+```
+
+A dialog box will open.
+
+Select:
+
+```text
+Blanks
+```
+
+Then click:
+
+```text
+OK
+```
+
+### Expected Result
+
+If no cell is selected:
+
+```text
+No missing data found.
+```
+
+If Excel selects any cells, those cells contain missing values.
+
+---
+
+# 7.2 Duplicate Student ID Check
+
+Select:
+
+```text
+A2:A16
+```
+
+Then:
+
+```text
+Home
+→ Conditional Formatting
+→ Highlight Cells Rules
+→ Duplicate Values
+```
+
+A dialog box will appear.
+
+Keep:
+
+```text
+Duplicate
+```
+
+Then click:
+
+```text
+OK
+```
+
+Excel will highlight duplicate Student IDs.
+
+### Expected Result
+
+If nothing is highlighted:
+
+```text
+No duplicate Student IDs found.
+```
+
+---
+
+# 7.3 Marks Validation
+
+Marks are stored in:
+
+```text
+F2:H16
+```
+
+because:
+
+```text
+F = Assignment
+G = Midterm
+H = Final
+```
+
+Valid range:
+
+```text
+0–100
+```
+
+---
+
+## Check Values Below 0
+
+Select:
+
+```text
+F2:H16
+```
+
+Then:
+
+```text
+Home
+→ Conditional Formatting
+→ Highlight Cells Rules
+→ Less Than
+```
+
+Enter:
+
+```text
+0
+```
+
+Click:
+
+```text
+OK
+```
+
+Any value below 0 will be highlighted.
+
+---
+
+## Check Values Above 100
+
+Again select:
+
+```text
+F2:H16
+```
+
+Then:
+
+```text
+Home
+→ Conditional Formatting
+→ Highlight Cells Rules
+→ Greater Than
+```
+
+Enter:
+
+```text
+100
+```
+
+Click:
+
+```text
+OK
+```
+
+Any value above 100 will be highlighted.
+
+---
+
+## Expected Result
+
+If no invalid marks are found:
+
+```text
+All marks are within the valid range of 0–100.
+```
+
+---
+
+# 7.4 Attendance Validation
+
+Attendance is stored in:
+
+```text
+E2:E16
+```
+
+Valid range:
+
+```text
+0–100
+```
+
+Select:
+
+```text
+E2:E16
+```
+
+Then:
+
+```text
+Home
+→ Conditional Formatting
+→ Highlight Cells Rules
+→ Less Than
+```
+
+Enter:
+
+```text
+0
+```
+
+Then repeat:
+
+```text
+Home
+→ Conditional Formatting
+→ Highlight Cells Rules
+→ Greater Than
+```
+
+Enter:
+
+```text
+100
+```
+
+If no values are highlighted:
+
+```text
+All attendance values are within the valid range.
+```
+
+---
+
+# 7.5 Study Hours Validation
+
+Study Hours are stored in:
+
+```text
+I2:I16
+```
+
+Expected values:
+
+```text
+5–16 hours/week
+```
+
+---
+
+## Check Negative Study Hours
+
+Select:
+
+```text
+I2:I16
+```
+
+Then:
+
+```text
+Home
+→ Conditional Formatting
+→ Highlight Cells Rules
+→ Less Than
+```
+
+Enter:
+
+```text
+0
+```
+
+Click:
+
+```text
+OK
+```
+
+---
+
+## Check Text Values
+
+If values such as:
+
+```text
+12 hours
+10 hours
+```
+
+were entered, Excel may treat them as text.
+
+A quick way to check is:
+
+```text
+Select I2:I16
+```
+
+Then look at the values/formulas and make sure the cells contain numeric values.
+
+Correct:
+
+```text
+12
+```
+
+Incorrect:
+
+```text
+12 hours
+```
+
+---
