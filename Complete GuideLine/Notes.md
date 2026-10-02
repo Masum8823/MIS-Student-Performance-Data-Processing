@@ -32,3 +32,55 @@ This README is designed as a practical guide. You can keep it beside your Excel 
 * [22. Final Checklist](#22-final-checklist)
 
 ---
+
+# 1. Project Overview
+
+## Project Title
+
+**Student Performance Data Processing**
+
+## Project Objective
+
+The objective of this project is to process raw student information and convert it into useful academic information using Microsoft Excel.
+
+The project covers:
+
+* Data Collection
+* Data Entry
+* Data Validation
+* Data Cleaning
+* Data Processing
+* Total Score Calculation
+* Grade Calculation
+* Data Analysis
+* Data Visualization
+
+---
+
+# 2. Complete Project Workflow
+
+```text
+Data Collection
+       ↓
+Create Excel File
+       ↓
+Enter Student Data
+       ↓
+Format Dataset
+       ↓
+Data Validation
+       ↓
+Data Cleaning
+       ↓
+Calculate Total Score
+       ↓
+Calculate Grade
+       ↓
+Data Analysis
+       ↓
+Create Charts
+       ↓
+Final Report
+```
+
+---
