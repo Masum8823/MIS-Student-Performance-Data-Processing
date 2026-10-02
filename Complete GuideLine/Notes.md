@@ -1842,3 +1842,433 @@ Linear
 The trendline will show the general direction of the relationship.
 
 ---
+
+# 19. Final Analysis Summary
+
+Create a final summary table.
+
+| Analysis             |          Result |
+| -------------------- | --------------: |
+| Average Total Score  |           78.01 |
+| Highest Score        |           92.60 |
+| Lowest Score         |           55.70 |
+| CSE Average Score    |           70.52 |
+| EEE Average Score    |           82.18 |
+| BBA Average Score    |           84.03 |
+| Average Attendance   |           80.60 |
+| Attendance Below 75% |      4 students |
+| A+ or A              |      9 students |
+| Correlation          |         ≈ 0.965 |
+| Relationship         | Strong Positive |
+
+---
+
+# 20. Final Excel Structure
+
+The main dataset should finally contain:
+
+| Column | Header               |
+| ------ | -------------------- |
+| A      | Student ID           |
+| B      | Name                 |
+| C      | Department           |
+| D      | Gender               |
+| E      | Attendance           |
+| F      | Assignment Mark      |
+| G      | Midterm Mark         |
+| H      | Final Mark           |
+| I      | Study Hours per Week |
+| J      | Total Score          |
+| K      | Grade                |
+
+Therefore:
+
+```text
+A1:K16
+```
+
+contains the main student dataset.
+
+---
+
+# 21. Excel Functions Used
+
+## 21.1 AVERAGE
+
+### Purpose
+
+Calculate average.
+
+### Formula
+
+```excel
+=AVERAGE(J2:J16)
+```
+
+### Used for
+
+Average Total Score.
+
+---
+
+## 21.2 MAX
+
+### Purpose
+
+Find the highest value.
+
+### Formula
+
+```excel
+=MAX(J2:J16)
+```
+
+### Used for
+
+Highest Total Score.
+
+---
+
+## 21.3 MIN
+
+### Purpose
+
+Find the lowest value.
+
+### Formula
+
+```excel
+=MIN(J2:J16)
+```
+
+### Used for
+
+Lowest Total Score.
+
+---
+
+## 21.4 AVERAGEIF
+
+### Purpose
+
+Calculate average based on a condition.
+
+### Formula
+
+```excel
+=AVERAGEIF(C2:C16,"CSE",J2:J16)
+```
+
+### Used for
+
+Department-wise Average Score.
+
+---
+
+## 21.5 COUNTIF
+
+### Purpose
+
+Count cells that satisfy a condition.
+
+### Formula
+
+```excel
+=COUNTIF(E2:E16,"<75")
+```
+
+### Used for
+
+Students with attendance below 75%.
+
+Another example:
+
+```excel
+=COUNTIF(J2:J16,">=75")
+```
+
+Used for:
+
+```text
+Students receiving A+ or A.
+```
+
+---
+
+## 21.6 CORREL
+
+### Purpose
+
+Find the correlation between two datasets.
+
+### Formula
+
+```excel
+=CORREL(I2:I16,J2:J16)
+```
+
+### Used for
+
+Study Hours vs Total Score relationship.
+
+---
+
+## 21.7 IF
+
+### Purpose
+
+Assign grades based on score conditions.
+
+### Formula
+
+```excel
+=IF(J2>=80,"A+",IF(J2>=75,"A",IF(J2>=70,"A-",IF(J2>=65,"B+",IF(J2>=60,"B",IF(J2>=55,"B-",IF(J2>=50,"C+",IF(J2>=45,"C",IF(J2>=40,"D","F")))))))))
+```
+
+### Used for
+
+Automatic Grade Calculation.
+
+---
+
+# 22. Final Checklist
+
+Before submitting the project, check everything below.
+
+## Data Collection
+
+```text
+☐ At least 3 data sources identified
+☐ Source mapping completed
+```
+
+## Data Entry
+
+```text
+☐ 15 students entered
+☐ Headers entered correctly
+☐ Attendance stored as numbers
+☐ Study hours stored as numbers
+☐ Marks stored as numbers
+```
+
+## Data Validation
+
+```text
+☐ Missing values checked
+☐ Duplicate Student IDs checked
+☐ Assignment marks checked
+☐ Midterm marks checked
+☐ Final marks checked
+☐ Attendance checked
+☐ Study hours checked
+```
+
+## Data Cleaning
+
+```text
+☐ Attendance standardized
+☐ Study hours standardized
+☐ Missing values handled
+☐ Duplicate IDs checked
+```
+
+## Data Processing
+
+```text
+☐ Total Score column created
+☐ Grade column created
+☐ Total Score formula applied
+☐ Grade formula applied
+☐ Formulas copied to all 15 students
+```
+
+## Data Analysis
+
+```text
+☐ Average Total Score calculated
+☐ Highest Score calculated
+☐ Lowest Score calculated
+☐ Department-wise Average calculated
+☐ Average Attendance calculated
+☐ Attendance below 75% calculated
+☐ A+ or A students counted
+☐ Correlation calculated
+```
+
+## Data Visualization
+
+```text
+☐ Department-wise Average Score chart created
+☐ Grade Distribution chart created
+☐ Study Hours vs Total Score scatter chart created
+☐ Chart titles added
+☐ Axis labels checked
+```
+
+---
+
+# Quick Formula Reference
+
+For quick use, all important formulas are listed below.
+
+### Total Score
+
+```excel
+=F2*20%+G2*30%+H2*50%
+```
+
+### Grade
+
+```excel
+=IF(J2>=80,"A+",IF(J2>=75,"A",IF(J2>=70,"A-",IF(J2>=65,"B+",IF(J2>=60,"B",IF(J2>=55,"B-",IF(J2>=50,"C+",IF(J2>=45,"C",IF(J2>=40,"D","F")))))))))
+```
+
+### Average Total Score
+
+```excel
+=AVERAGE(J2:J16)
+```
+
+### Highest Score
+
+```excel
+=MAX(J2:J16)
+```
+
+### Lowest Score
+
+```excel
+=MIN(J2:J16)
+```
+
+### CSE Average
+
+```excel
+=AVERAGEIF(C2:C16,"CSE",J2:J16)
+```
+
+### EEE Average
+
+```excel
+=AVERAGEIF(C2:C16,"EEE",J2:J16)
+```
+
+### BBA Average
+
+```excel
+=AVERAGEIF(C2:C16,"BBA",J2:J16)
+```
+
+### Average Attendance
+
+```excel
+=AVERAGE(E2:E16)
+```
+
+### Attendance Below 75%
+
+```excel
+=COUNTIF(E2:E16,"<75")
+```
+
+### A+ or A
+
+```excel
+=COUNTIF(J2:J16,">=75")
+```
+
+### Grade Count
+
+```excel
+=COUNTIF($K$2:$K$16,M8)
+```
+
+### Study Hours vs Total Score Correlation
+
+```excel
+=CORREL(I2:I16,J2:J16)
+```
+
+---
+
+# Final Workflow
+
+```text
+┌─────────────────────────┐
+│    1. Data Collection   │
+└────────────┬────────────┘
+             ↓
+┌─────────────────────────┐
+│      2. Data Entry      │
+└────────────┬────────────┘
+             ↓
+┌─────────────────────────┐
+│    3. Data Validation   │
+└────────────┬────────────┘
+             ↓
+┌─────────────────────────┐
+│     4. Data Cleaning    │
+└────────────┬────────────┘
+             ↓
+┌─────────────────────────┐
+│    5. Data Processing   │
+│  Total Score + Grade    │
+└────────────┬────────────┘
+             ↓
+┌─────────────────────────┐
+│     6. Data Analysis    │
+└────────────┬────────────┘
+             ↓
+┌─────────────────────────┐
+│  7. Data Visualization  │
+└─────────────────────────┘
+```
+
+---
+
+## Project Outcome
+
+The project transforms raw student information into structured and meaningful academic information.
+
+The final Excel workbook provides:
+
+* Clean student data
+* Weighted total scores
+* Automatic grades
+* Overall performance statistics
+* Department-wise performance
+* Attendance analysis
+* Grade distribution
+* Study-hours analysis
+* Visual charts
+
+This demonstrates a complete **data processing workflow for a simple Student Performance Information System** using Microsoft Excel.
+
+---
+
+## Tools Used
+
+* Microsoft Excel
+* Excel Tables
+* Conditional Formatting
+* Excel Formulas
+* Column Charts
+* Scatter Charts
+* Trendlines
+
+---
+
+## Project Status
+
+```text
+Data Collection        ✓
+Data Entry             ✓
+Data Validation        ✓
+Data Cleaning          ✓
+Data Processing        ✓
+Data Analysis          ✓
+Data Visualization     ✓
+```
+
+**Status: Completed**
