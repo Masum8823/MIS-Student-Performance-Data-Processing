@@ -916,3 +916,125 @@ Excel will show:
 ```
 
 ---
+
+# 10. Stage 8 — Grade Calculation
+
+The grading scale used for this project is:
+
+| Total Score | Grade |
+| ----------: | :---: |
+|      80–100 |   A+  |
+|       75–79 |   A   |
+|       70–74 |   A-  |
+|       65–69 |   B+  |
+|       60–64 |   B   |
+|       55–59 |   B-  |
+|       50–54 |   C+  |
+|       45–49 |   C   |
+|       40–44 |   D   |
+|    Below 40 |   F   |
+
+> Always follow the teacher's grading scale if a different scale is provided.
+
+---
+
+# 10.1 Grade Formula
+
+Click:
+
+```text
+K2
+```
+
+Enter:
+
+```excel
+=IF(J2>=80,"A+",IF(J2>=75,"A",IF(J2>=70,"A-",IF(J2>=65,"B+",IF(J2>=60,"B",IF(J2>=55,"B-",IF(J2>=50,"C+",IF(J2>=45,"C",IF(J2>=40,"D","F")))))))))
+```
+
+Press:
+
+```text
+Enter
+```
+
+---
+
+# 10.2 How the Formula Works
+
+Excel checks the conditions from left to right.
+
+First:
+
+```text
+J2 >= 80
+```
+
+If true:
+
+```text
+A+
+```
+
+Otherwise:
+
+```text
+J2 >= 75
+```
+
+If true:
+
+```text
+A
+```
+
+Then:
+
+```text
+J2 >= 70
+```
+
+means:
+
+```text
+A-
+```
+
+The process continues until F.
+
+---
+
+## Grade Formula Logic
+
+```text
+Score >= 80 → A+
+Score >= 75 → A
+Score >= 70 → A-
+Score >= 65 → B+
+Score >= 60 → B
+Score >= 55 → B-
+Score >= 50 → C+
+Score >= 45 → C
+Score >= 40 → D
+Otherwise    → F
+```
+
+---
+
+# 10.3 Copy Grade Formula
+
+After entering the formula in:
+
+```text
+K2
+```
+
+Double-click the Fill Handle.
+
+The formula will automatically fill:
+
+```text
+K2:K16
+```
+
+---
