@@ -1370,3 +1370,148 @@ Result = 4
 ```
 
 ---
+
+# 14. Stage 12 — A+ and A Analysis
+
+According to the grading scale:
+
+```text
+A+ = 80+
+A  = 75–79
+```
+
+Therefore:
+
+```text
+A+ or A
+=
+Total Score >= 75
+```
+
+---
+
+## Formula
+
+Click an empty cell.
+
+Enter:
+
+```excel
+=COUNTIF(J2:J16,">=75")
+```
+
+Expected result:
+
+```text
+9
+```
+
+Therefore:
+
+```text
+9 students received A+ or A.
+```
+
+---
+
+# 15. Stage 13 — Correlation Analysis
+
+We now analyze the relationship between:
+
+```text
+Study Hours per Week
+```
+
+and:
+
+```text
+Total Score
+```
+
+Study Hours:
+
+```text
+I2:I16
+```
+
+Total Score:
+
+```text
+J2:J16
+```
+
+---
+
+# 15.1 CORREL Formula
+
+Click an empty cell.
+
+Enter:
+
+```excel
+=CORREL(I2:I16,J2:J16)
+```
+
+Press:
+
+```text
+Enter
+```
+
+Expected result:
+
+```text
+Approximately 0.965
+```
+
+---
+
+# 15.2 Understanding Correlation
+
+Correlation coefficient `r` generally ranges from:
+
+```text
+-1 to +1
+```
+
+### Positive Correlation
+
+```text
+r > 0
+```
+
+As one variable increases, the other tends to increase.
+
+### Negative Correlation
+
+```text
+r < 0
+```
+
+As one variable increases, the other tends to decrease.
+
+### Near Zero
+
+```text
+r ≈ 0
+```
+
+There is little linear relationship.
+
+---
+
+## This Dataset
+
+The result is approximately:
+
+```text
+r = 0.965
+```
+
+This indicates a strong positive relationship in this dataset.
+
+### Report Statement
+
+> There is a strong positive relationship between study hours and total score. In this dataset, students who study more hours per week generally have higher total scores.
+
+---
