@@ -1515,3 +1515,330 @@ This indicates a strong positive relationship in this dataset.
 > There is a strong positive relationship between study hours and total score. In this dataset, students who study more hours per week generally have higher total scores.
 
 ---
+
+# 16. Stage 14 — Data Visualization
+
+We will create three charts:
+
+```text
+Chart 1 → Department-wise Average Score
+Chart 2 → Grade Distribution
+Chart 3 → Study Hours vs. Total Score
+```
+
+---
+
+# 16.1 Chart 1 — Department-wise Average Score
+
+First create this table:
+
+| Department | Average Score |
+| ---------- | ------------: |
+| CSE        |         70.52 |
+| EEE        |         82.18 |
+| BBA        |         84.03 |
+
+---
+
+## Step-by-Step
+
+### Step 1
+
+Select:
+
+```text
+M1:N4
+```
+
+### Step 2
+
+Go to:
+
+```text
+Insert
+→ Charts
+→ Column or Bar Chart
+→ 2-D Column
+→ Clustered Column
+```
+
+### Step 3
+
+Click the chart title.
+
+Change it to:
+
+```text
+Department-wise Average Score
+```
+
+---
+
+## Result
+
+The X-axis should show:
+
+```text
+CSE
+EEE
+BBA
+```
+
+The Y-axis should show:
+
+```text
+Average Score
+```
+
+---
+
+# 17. Stage 15 — Grade Distribution
+
+First create a grade count table.
+
+For example:
+
+| M     |                  N |
+| ----- | -----------------: |
+| Grade | Number of Students |
+| A+    |                    |
+| A     |                    |
+| A-    |                    |
+| B+    |                    |
+| B     |                    |
+| B-    |                    |
+| C+    |                    |
+| C     |                    |
+| D     |                    |
+| F     |                    |
+
+---
+
+# 17.1 Enter Grades
+
+Enter:
+
+```text
+M8 = A+
+M9 = A
+M10 = A-
+M11 = B+
+M12 = B
+M13 = B-
+M14 = C+
+M15 = C
+M16 = D
+M17 = F
+```
+
+---
+
+# 17.2 Count Each Grade
+
+Click:
+
+```text
+N8
+```
+
+Enter:
+
+```excel
+=COUNTIF($K$2:$K$16,M8)
+```
+
+Press:
+
+```text
+Enter
+```
+
+---
+
+# 17.3 Why `$` Is Used
+
+The formula contains:
+
+```text
+$K$2:$K$16
+```
+
+The `$` makes the range **absolute**.
+
+When the formula is copied down, Excel will keep:
+
+```text
+K2:K16
+```
+
+instead of changing it.
+
+Meanwhile:
+
+```text
+M8
+```
+
+will become:
+
+```text
+M9
+M10
+M11
+...
+```
+
+This allows Excel to count each grade separately.
+
+---
+
+# 17.4 Copy the Formula
+
+Select:
+
+```text
+N8
+```
+
+Then drag the Fill Handle down to:
+
+```text
+N17
+```
+
+Now each grade count will be calculated automatically.
+
+---
+
+# 17.5 Create Grade Distribution Chart
+
+Select:
+
+```text
+M8:N17
+```
+
+Then:
+
+```text
+Insert
+→ Column or Bar Chart
+→ 2-D Column
+→ Clustered Column
+```
+
+Change the chart title to:
+
+```text
+Grade Distribution
+```
+
+---
+
+# 18. Stage 16 — Study Hours vs Total Score
+
+This chart is different from a normal column chart.
+
+We need a **Scatter Chart**.
+
+---
+
+# 18.1 Required Data
+
+We need:
+
+```text
+Study Hours
+```
+
+and:
+
+```text
+Total Score
+```
+
+The columns are:
+
+```text
+I = Study Hours
+J = Total Score
+```
+
+---
+
+# 18.2 Select Data
+
+Select:
+
+```text
+I1:J16
+```
+
+---
+
+# 18.3 Insert Scatter Chart
+
+Go to:
+
+```text
+Insert
+→ Scatter (X, Y)
+→ Scatter with only Markers
+```
+
+---
+
+# 18.4 Chart Title
+
+Change the title to:
+
+```text
+Study Hours vs. Total Score
+```
+
+---
+
+# 18.5 Axis Meaning
+
+The horizontal axis should represent:
+
+```text
+Study Hours per Week
+```
+
+The vertical axis should represent:
+
+```text
+Total Score
+```
+
+Therefore:
+
+```text
+X-axis = Study Hours
+Y-axis = Total Score
+```
+
+---
+
+# 18.6 Add Trendline
+
+To make the relationship easier to see:
+
+1. Click the scatter chart.
+2. Click the `+` icon beside the chart.
+3. Enable:
+
+```text
+Trendline
+```
+
+4. Select:
+
+```text
+Linear
+```
+
+The trendline will show the general direction of the relationship.
+
+---
