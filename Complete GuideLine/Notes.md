@@ -1038,3 +1038,245 @@ K2:K16
 ```
 
 ---
+
+
+# 11. Stage 9 — Data Analysis
+
+Now we analyze the processed data.
+
+---
+
+# 11.1 Average Total Score
+
+Click any empty cell.
+
+For example:
+
+```text
+M2
+```
+
+Enter:
+
+```excel
+=AVERAGE(J2:J16)
+```
+
+Press:
+
+```text
+Enter
+```
+
+Expected result:
+
+```text
+78.01
+```
+
+---
+
+## What Does AVERAGE Do?
+
+```text
+AVERAGE()
+```
+
+calculates the arithmetic mean.
+
+For example:
+
+```text
+10 + 20 + 30 = 60
+```
+
+Number of values:
+
+```text
+3
+```
+
+Average:
+
+```text
+60 / 3 = 20
+```
+
+---
+
+# 11.2 Highest Score
+
+Click:
+
+```text
+M3
+```
+
+Enter:
+
+```excel
+=MAX(J2:J16)
+```
+
+Expected result:
+
+```text
+92.60
+```
+
+`MAX()` returns the largest value from the selected range.
+
+---
+
+# 11.3 Lowest Score
+
+Click:
+
+```text
+M4
+```
+
+Enter:
+
+```excel
+=MIN(J2:J16)
+```
+
+Expected result:
+
+```text
+55.70
+```
+
+`MIN()` returns the smallest value from the selected range.
+
+---
+
+# 12. Stage 10 — Department-wise Analysis
+
+Create a separate table.
+
+For example:
+
+| M          | N             |
+| ---------- | ------------- |
+| Department | Average Score |
+| CSE        |               |
+| EEE        |               |
+| BBA        |               |
+
+---
+
+# 12.1 CSE Average
+
+Click:
+
+```text
+N2
+```
+
+Enter:
+
+```excel
+=AVERAGEIF(C2:C16,"CSE",J2:J16)
+```
+
+Press:
+
+```text
+Enter
+```
+
+Expected result:
+
+```text
+70.52
+```
+
+---
+
+# 12.2 EEE Average
+
+Click:
+
+```text
+N3
+```
+
+Enter:
+
+```excel
+=AVERAGEIF(C2:C16,"EEE",J2:J16)
+```
+
+Expected result:
+
+```text
+82.18
+```
+
+---
+
+# 12.3 BBA Average
+
+Click:
+
+```text
+N4
+```
+
+Enter:
+
+```excel
+=AVERAGEIF(C2:C16,"BBA",J2:J16)
+```
+
+Expected result:
+
+```text
+84.03
+```
+
+---
+
+# 12.4 AVERAGEIF Formula Explanation
+
+The formula:
+
+```excel
+=AVERAGEIF(C2:C16,"CSE",J2:J16)
+```
+
+contains three parts:
+
+```text
+C2:C16
+```
+
+This is the **criteria range**.
+
+Excel checks the department names here.
+
+```text
+"CSE"
+```
+
+This is the condition.
+
+```text
+J2:J16
+```
+
+This is the range from which the average is calculated.
+
+Therefore:
+
+```text
+Find CSE students
+        ↓
+Take their Total Scores
+        ↓
+Calculate Average
+```
+
+---
