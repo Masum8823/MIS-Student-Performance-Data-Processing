@@ -84,3 +84,257 @@ Final Report
 ```
 
 ---
+
+# 3. Stage 1 — Data Collection
+
+Student performance data can come from different university systems.
+
+## Source 1 — Student Information System (SIS)
+
+Possible data:
+
+* Student ID
+* Student Name
+* Department
+* Gender
+
+## Source 2 — Attendance Management System
+
+Possible data:
+
+* Attendance Percentage
+
+## Source 3 — LMS / Academic Records
+
+Possible data:
+
+* Assignment Mark
+* Midterm Mark
+* Final Mark
+
+## Source 4 — Student Survey
+
+Possible data:
+
+* Study Hours per Week
+
+---
+
+## Source Mapping
+
+| Data            | Source                       |
+| --------------- | ---------------------------- |
+| Student ID      | Student Information System   |
+| Name            | Student Information System   |
+| Department      | Student Information System   |
+| Gender          | Student Information System   |
+| Attendance      | Attendance Management System |
+| Assignment Mark | LMS / Academic Records       |
+| Midterm Mark    | Exam Records                 |
+| Final Mark      | Exam Records                 |
+| Study Hours     | Student Survey               |
+
+---
+
+# 4. Stage 2 — Creating the Excel File
+
+## Step 1 — Open Excel
+
+Open:
+
+```text
+Microsoft Excel
+```
+
+Then select:
+
+```text
+Blank Workbook
+```
+
+---
+
+## Step 2 — Save the File
+
+Go to:
+
+```text
+File
+→ Save As
+```
+
+Give the file a name such as:
+
+```text
+Student_Performance_Data_Processing.xlsx
+```
+
+---
+
+# 5. Stage 3 — Data Entry
+
+We will use **Row 1** for headers.
+
+Enter the following:
+
+| Cell | Header               |
+| ---- | -------------------- |
+| A1   | Student ID           |
+| B1   | Name                 |
+| C1   | Department           |
+| D1   | Gender               |
+| E1   | Attendance           |
+| F1   | Assignment Mark      |
+| G1   | Midterm Mark         |
+| H1   | Final Mark           |
+| I1   | Study Hours per Week |
+
+---
+
+## Final Header Row
+
+```text
+A1 = Student ID
+B1 = Name
+C1 = Department
+D1 = Gender
+E1 = Attendance
+F1 = Assignment Mark
+G1 = Midterm Mark
+H1 = Final Mark
+I1 = Study Hours per Week
+```
+
+---
+
+## Student Data
+
+Enter the 15 students from:
+
+```text
+Row 2 → Row 16
+```
+
+Therefore:
+
+```text
+First student = Row 2
+Last student  = Row 16
+```
+
+---
+
+## Important Data Entry Rule
+
+### Attendance
+
+Enter:
+
+```text
+88
+```
+
+Do not enter:
+
+```text
+88%
+```
+
+### Study Hours
+
+Enter:
+
+```text
+12
+```
+
+Do not enter:
+
+```text
+12 hours
+```
+
+The reason is that Excel needs numeric values for calculations.
+
+---
+
+# 6. Stage 4 — Formatting the Dataset
+
+After entering all data:
+
+Select:
+
+```text
+A1:I16
+```
+
+Then press:
+
+```text
+Ctrl + T
+```
+
+A dialog box will appear.
+
+Check:
+
+```text
+☑ My table has headers
+```
+
+Then click:
+
+```text
+OK
+```
+
+---
+
+## Alternative Method
+
+You can also use:
+
+```text
+Insert
+→ Table
+```
+
+Then select the data range:
+
+```text
+A1:I16
+```
+
+and enable:
+
+```text
+My table has headers
+```
+
+---
+
+## Recommended Header Formatting
+
+Select:
+
+```text
+A1:I1
+```
+
+Then:
+
+```text
+Home
+→ Bold
+```
+
+You can also use:
+
+```text
+Home
+→ Center
+```
+
+for better alignment.
+
+---
