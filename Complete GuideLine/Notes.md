@@ -667,3 +667,252 @@ Incorrect:
 ```
 
 ---
+
+
+# 8. Stage 6 — Data Cleaning
+
+After validation, clean the data.
+
+## Cleaning Rule 1 — Attendance
+
+Incorrect:
+
+```text
+88%
+```
+
+Correct:
+
+```text
+88
+```
+
+---
+
+## Cleaning Rule 2 — Study Hours
+
+Incorrect:
+
+```text
+12 hours
+```
+
+Correct:
+
+```text
+12
+```
+
+---
+
+## Cleaning Rule 3 — Duplicate IDs
+
+Expected:
+
+```text
+No duplicate Student IDs.
+```
+
+---
+
+## Cleaning Rule 4 — Missing Values
+
+Expected:
+
+```text
+No missing values.
+```
+
+---
+
+## Final Cleaning Statement
+
+> The dataset was cleaned by standardizing attendance and study-hour values into numeric format. No missing values or duplicate student IDs were found.
+
+---
+
+# 9. Stage 7 — Total Score Calculation
+
+Now we calculate the weighted total score.
+
+Add two new columns.
+
+## Add Total Score
+
+Enter in:
+
+```text
+J1
+```
+
+```text
+Total Score
+```
+
+## Add Grade
+
+Enter in:
+
+```text
+K1
+```
+
+```text
+Grade
+```
+
+---
+
+# 9.1 Weight Distribution
+
+The marks are weighted as follows:
+
+| Component  | Weight |
+| ---------- | -----: |
+| Assignment |    20% |
+| Midterm    |    30% |
+| Final      |    50% |
+
+Therefore:
+
+```text
+Total Score
+=
+Assignment × 20%
++
+Midterm × 30%
++
+Final × 50%
+```
+
+---
+
+# 9.2 Excel Formula for Total Score
+
+Click:
+
+```text
+J2
+```
+
+Enter:
+
+```excel
+=F2*20%+G2*30%+H2*50%
+```
+
+Press:
+
+```text
+Enter
+```
+
+---
+
+## Formula Explanation
+
+```text
+F2*20%
+```
+
+means:
+
+```text
+Assignment × 20%
+```
+
+```text
+G2*30%
+```
+
+means:
+
+```text
+Midterm × 30%
+```
+
+```text
+H2*50%
+```
+
+means:
+
+```text
+Final × 50%
+```
+
+The three values are then added.
+
+---
+
+# 9.3 Copy Formula to All Students
+
+After entering the formula in:
+
+```text
+J2
+```
+
+you will see a small square at the bottom-right corner of the cell.
+
+This is called the **Fill Handle**.
+
+Double-click the Fill Handle.
+
+Excel will automatically copy the formula down:
+
+```text
+J2
+J3
+J4
+...
+J16
+```
+
+---
+
+## Alternative Method
+
+You can also:
+
+1. Select J2.
+2. Move the mouse to the bottom-right corner.
+3. Drag down to J16.
+
+---
+
+# 9.4 Example Calculation
+
+Suppose S001 has:
+
+```text
+Assignment = 82
+Midterm = 78
+Final = 85
+```
+
+Then:
+
+```text
+82 × 20% = 16.4
+
+78 × 30% = 23.4
+
+85 × 50% = 42.5
+```
+
+Therefore:
+
+```text
+Total Score
+= 16.4 + 23.4 + 42.5
+= 82.3
+```
+
+Excel will show:
+
+```text
+82.3
+```
+
+---
